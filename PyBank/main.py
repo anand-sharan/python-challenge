@@ -34,7 +34,7 @@ with open(csvpath,'r',encoding="utf-8") as bugdet_csv_file:
     csv_header = next(csvreader)
     
     # Uncomment below line to print the stored csv_header
-    #print(f"CSV Header: {csv_header}")
+    print(f"CSV Header: {csv_header}")
     
     # Read each row of data after the header and add values to the list variables
     for row in csvreader:

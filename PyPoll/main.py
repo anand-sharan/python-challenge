@@ -27,6 +27,18 @@ unique_candidate_vote_count = []
 unique_candidate_percent_of_votes = []
 winners = []
 
+# Read the data file and print output
+with open(csvpath,'r',encoding="utf-8") as election_csv_file:
+
+    # CSV reader specifies delimiter and variable that holds contents
+    csvreader = csv.reader(election_csv_file, delimiter=',')
+
+    # Skip the header row first
+    csv_header = next(csvreader)
+    
+    # Uncomment below line to print the stored csv_header
+    print(f"CSV Header: {csv_header}")
+
 # Load dictionary variable from the election_date.csv source file
 # count total votes casted in the election
 with open(csvpath,'r', newline="") as election_data_file:
