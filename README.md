@@ -59,7 +59,31 @@ Hi All,
         Step 3. Ensure python is activated by running command `source activate PythonData`
         Step 4. Execute command `python main.py` to check the solution
         Step 5. Validate output displayed on screen for `Election Results`
-        Step 6. Change your working directory to `~/python-challenge/PyPolll/analysis`
+        Step 6. Change your working directory to `~/python-challenge/PyPoll/analysis`
+        Step 7. Open file output.csv in Excel or any text editor to view solutions output file
+
+    PyBoss
+    -------
+    Python Script for analysis a set of employee data. Provided a set of employee data called employee_data.csv. The dataset is composed of three columns: Emp ID, Name, DOB, SSN, State.
+
+    The Python script coverts the data:
+
+    * The `Name` column should be split into separate `First Name` and `Last Name` columns.
+
+    * The `DOB` data should be re-written into `MM/DD/YYYY` format.
+
+    * The `SSN` data should be re-written such that the first five numbers are hidden from view.
+
+    * The `State` data should be re-written as simple two-letter abbreviations.
+
+
+        Steps to execute the script and validate the solution:
+
+        Step 1. Download the git hub repository to local folder on your computer
+        Step 2. Change your working directory to `~/python-challenge/PyBoss`
+        Step 3. Ensure python is activated by running command `source activate PythonData`
+        Step 4. Execute command `python main.py` to check the solution
+        Step 6. Change your working directory to `~/python-challenge/PyPoll/output`
         Step 7. Open file output.csv in Excel or any text editor to view solutions output file
 
 3. Request for you gracious feedback.
