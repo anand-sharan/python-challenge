@@ -72,17 +72,17 @@ for k in range(len(unique_candidates)):
 # Assign Voting Results Column Headers into list variable
 voting_results_col_header = ["  Election Results",
                              "  ----------------------------",
-                             "  Total Votes: ",
+                             "  Total Votes:",
                              "  ----------------------------"
                             ]
 
 # Assign Unique candidate names to Column Headers
 for l in range(len(unique_candidates)):
-    voting_results_col_header.append("  " + unique_candidates[l] + ": ")
+    voting_results_col_header.append("  " + unique_candidates[l] + ":")
 
 # Assign election's winner names to Column Headers
 voting_results_col_header.append("  -------------------------")
-voting_results_col_header.append("  Winner: ")
+voting_results_col_header.append("  Winner:")
 voting_results_col_header.append("  -------------------------")
 
 # Assign total votes cast results values into voting results list variable
@@ -118,11 +118,13 @@ voting_results_file = list(zip(voting_results_col_header, voting_results_col_val
 with open(election_output_file, "w", newline="") as datafile:
     writer = csv.writer(datafile)
 
-    writer.writerows(voting_results_file)
+    # print out to file:
+    for o, p in voting_results_file:
+        print(o, p, end='\n', file=datafile)
 
 # Zip all two lists together into tuples for writing to file
 voting_results_ter = list(zip(voting_results_col_header, voting_results_col_val))
-    
+
 # print out to terminal:
-for p, q in voting_results_ter:
-    print(p, q, end='\n')
+for r, s in voting_results_ter:
+    print(r, s, end='\n')

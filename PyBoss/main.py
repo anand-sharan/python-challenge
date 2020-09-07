@@ -144,4 +144,5 @@ employee_data_file = zip(emp_id, first_name, last_name, date_of_birth, masked_ss
 with open(employee_output_file, "w", newline="") as datafile:
     writer = csv.writer(datafile)
 
+    # print out to file:
     writer.writerows(employee_data_file)

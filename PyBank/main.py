@@ -56,11 +56,11 @@ with open(csvpath,'r',encoding="utf-8") as bugdet_csv_file:
     grtst_decr_in_profits_mnth_and_yr = monthly_profit_and_loss_change.index(grtst_decr_in_losses) + 1
     
     # Assign Financial analysis Key Performance Indicators Column Headers
-    fin_analysis_kpi = ["  Total Months: ",
-                        "  Total: ",
-                        "  Average Change: ",
-                        "  Greatest Increase in Profits: ",
-                        "  Greatest Decrease in Profits: "
+    fin_analysis_kpi = ["  Total Months:",
+                        "  Total:",
+                        "  Average Change:",
+                        "  Greatest Increase in Profits:",
+                        "  Greatest Decrease in Profits:"
                        ]
     
     # Calulate the Financial analysis Key Performance Indicators Values into a list variable: 
@@ -89,7 +89,9 @@ with open(output_file, "w", newline="") as datafile:
     writer.writerow(["  Financial Analysis"])
     writer.writerow(["  ----------------------------"])    
 
-    writer.writerows(fin_results_file)
+    # print out to file:
+    for j, k in fin_results_file:
+        print(j, k, end='\n', file=datafile)
 
 # Zip all two lists together into tuples for printing to terminal
 fin_results_ter = list(zip(fin_analysis_kpi, fin_analysis_kpi_values))
@@ -99,5 +101,5 @@ print("  Financial Analysis")
 print("  ----------------------------")
 
 # print out to terminal:
-for j, k in fin_results_ter:
-    print(j, k, end='\n')
+for l, m in fin_results_ter:
+    print(l, m, end='\n')
