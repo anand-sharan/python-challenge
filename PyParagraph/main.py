@@ -25,11 +25,11 @@ paragraph_output_file = os.path.normpath(paragraph_output_file )
 with open(csvpath,'r', newline="") as text:
     paragraph = text.read()
 
-sentences = re.split(r' *[\.\?!][\'"\)\]]* +', paragraph)
+sentences = re.split("(?<=[.!?]) +", paragraph)
 
 count_words = 0
 for s in sentences:
-    count_words += len(re.findall(r'\w+', s)) 
+    count_words += len(re.findall(r'\w+', str(s)) ) 
 
 # Count number of sentences
 
