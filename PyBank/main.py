@@ -43,7 +43,7 @@ with open(csvpath,'r',encoding="utf-8") as bugdet_csv_file:
         months.append(row[0])
         profit_and_loss.append(float(row[1]))
         
-    # Utlize list comprehension to calculate monthly profit and loss change
+    # Calculate monthly profit and loss change
     for i in range(len(profit_and_loss)-1):
         monthly_profit_and_loss_change.append(round(profit_and_loss[i+1]-profit_and_loss[i],1))
     
@@ -76,12 +76,6 @@ with open(csvpath,'r',encoding="utf-8") as bugdet_csv_file:
 
 # Zip all two lists together into tuples for writing to file
 fin_results_file = list(zip(fin_analysis_kpi, fin_analysis_kpi_values))
-
-# Writing to file
-#with open(output_file, "w") as datafile:
-#    writer = csv.writer(datafile)
-#    for j, k in fin_results_file:
-#        print(j, k, end='\n', file=datafile)
 
 with open(output_file, "w", newline="") as datafile:
     writer = csv.writer(datafile)

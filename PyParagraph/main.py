@@ -27,6 +27,7 @@ with open(csvpath,'r', newline="") as text:
 
 sentences = re.split("(?<=[.!?]) +", paragraph)
 
+# Count number of words
 count_words = 0
 for s in sentences:
     count_words += len(re.findall(r'\w+', str(s)) ) 
@@ -42,8 +43,6 @@ avg_letters_per_word = '%.1f'%(len([letter for letter in paragraph if letter.isa
 avg_sentence_length = 0.0
 if count_sentences > 0:
     avg_sentence_length = '%.1f'%(count_words/count_sentences)
-
-#avg_sentence_length = '%.1f'%avg_sentence_length)
 
 # Assign Paragraph statictics names to Column Headers
 paragraph_analysis_col_header = [ "Paragraph Analysis",
