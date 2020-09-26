@@ -1,4 +1,4 @@
-# python-challenge (Hello)
+# python-challenge
 
 Hi All,
 
