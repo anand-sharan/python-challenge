@@ -37,12 +37,12 @@ for s in sentences:
 count_sentences = len(sentences)
 
 # Split paragraph into characters, count number of letters and average letters per word and store it till decimal
-avg_letters_per_word = '%.1f'%(len([letter for letter in paragraph if letter.isalpha()])/count_words)
+avg_letters_per_word = float('%.1f'%(len([letter for letter in paragraph if letter.isalpha()])/count_words))
 
 # Calculate average sentence length in words
 avg_sentence_length = 0.0
 if count_sentences > 0:
-    avg_sentence_length = '%.1f'%(count_words/count_sentences)
+    avg_sentence_length = float('%.1f'%(count_words/count_sentences))
 
 # Assign Paragraph statictics names to Column Headers
 paragraph_analysis_col_header = [ "Paragraph Analysis",

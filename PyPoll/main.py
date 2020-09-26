@@ -58,8 +58,7 @@ for i in unique_candidates:
         if i == j:
             unique_candidate_vote_count[unique_candidates.index(i)] += 1
     if total_votes_cast > 0:
-        unique_candidate_percent_of_votes[unique_candidates.index(i)] = "%.3f%%" % (100*(unique_candidate_vote_count[unique_candidates.index(i)] / total_votes_cast))
-        unique_candidate_percent_of_votes[unique_candidates.index(i)] = str(unique_candidate_percent_of_votes[unique_candidates.index(i)])
+        unique_candidate_percent_of_votes[unique_candidates.index(i)] = 100*(unique_candidate_vote_count[unique_candidates.index(i)] / total_votes_cast)
 
 # Find the maximum number of votes casted to a candidate
 max_votes=max(unique_candidate_vote_count)
@@ -94,7 +93,7 @@ voting_results_col_val = [   "",
 
 # Assign voting results values into voting results list variable
 for m in range(len(unique_candidates)):
-    voting_results_col_val.append(unique_candidate_percent_of_votes[m] + " (" + str(unique_candidate_vote_count[m]) + ")")
+    voting_results_col_val.append("%.3f%%" % (unique_candidate_percent_of_votes[m]) + " (" + str(unique_candidate_vote_count[m]) + ")")
 
 voting_results_col_val.append("")
 
